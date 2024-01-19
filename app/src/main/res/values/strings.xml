@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MultipleActivities</string>
+    <string name="title_activity_second">SecondActivity</string>
+    <string name="enter_your_name">Enter your name</string>
+    <string name="next">Next</string>
+    <string name="err_empty_name">The name cannot be empty. Please, enter a valid name.</string>
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+    <string name="hello">Hello</string>
+    <string name="back">Go back</string>
+</resources>

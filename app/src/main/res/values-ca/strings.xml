@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Activitats Múltiples</string>
+    <string name="title_activity_second">Segona Activity</string>
+    <string name="enter_your_name">Introdueix el teu nom</string>
+    <string name="next">Següent</string>
+    <string name="err_empty_name">El nom no pot estar buit. Si us plau, introdueixi un nom vàlid.</string>
+    <string name="error">Error</string>
+    <string name="ok">D\'Acord</string>
+    <string name="hello">Hola</string>
+    <string name="back">Tornar a l\'inici</string>
+</resources>
