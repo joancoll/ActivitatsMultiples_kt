@@ -42,12 +42,14 @@ class SecondActivity : ComponentActivity() {
                     ) {
                         val name = intent?.getStringExtra("name") ?: ""
                         Text(
-                            text = getString(R.string.hello)+ " $name!",
+                            text = getString(R.string.hello) + " $name!",
                             fontSize = 24.sp,
                         )
                         Spacer(modifier = Modifier.height(10.dp))
                         Button(onClick = {
                             val intent = Intent(this@SecondActivity, MainActivity::class.java)
+                            //per recordar el nom quan tornem a la MainActivity
+                            intent.putExtra("name", name)
                             startActivity(intent)
                         }) {
                             Icon(

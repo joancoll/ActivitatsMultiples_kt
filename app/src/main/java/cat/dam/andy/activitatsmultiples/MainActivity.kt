@@ -34,6 +34,7 @@ class MainActivity : ComponentActivity() {
     @OptIn(ExperimentalMaterial3Api::class) //per OulinedTextField
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val previousName = intent?.getStringExtra("name") ?: ""
         setContent {
             ActivitatsMultiplesTheme {
                 // A surface container using the 'background' color from the theme
@@ -42,10 +43,9 @@ class MainActivity : ComponentActivity() {
                     color = MaterialTheme.colorScheme.background
                 ) {
                     val context = LocalContext.current
-                    var name by rememberSaveable { mutableStateOf("") }
+                    var name by rememberSaveable { mutableStateOf(previousName) }
                     var showError by rememberSaveable { mutableStateOf(false) }
                     val dialogState = remember { mutableStateOf(false) }
-
                     Column(
                         modifier = Modifier
                             .fillMaxSize()
@@ -65,9 +65,7 @@ class MainActivity : ComponentActivity() {
                             ),
                             isError = showError
                         )
-
                         Spacer(modifier = Modifier.height(16.dp))
-
                         Button(onClick = {
                             if (name.isNotEmpty()) {
                                 val intent = Intent(context, SecondActivity::class.java)
